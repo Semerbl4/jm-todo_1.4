@@ -32,7 +32,7 @@ class NewTaskForm extends React.Component {
             this.setState({ value: e.target.value });
           }}
           onKeyDown={(e) => {
-            if (e.keyCode === 13) {
+            if (e.keyCode === 13 && e.target.value !== "") {
               addTask(value);
               this.setState({ value: "" });
               // console.log(value);

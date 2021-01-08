@@ -35,14 +35,15 @@ class Task extends React.Component {
     const { taskCreateTime } = this.props;
 
     // console.log(completed);
+    // console.log(this.props);
     return (
-      <li {...this.props} className={completed ? "completed" : undefined}>
+      <li className={completed ? "completed" : ""}>
         <div className="view">
           <input
             className="toggle"
             type="checkbox"
             onClick={this.completeToogler}
-            checked={completed ? true : false}
+            defaultChecked={completed}
           />
           <label>
             <span className="description">{taskText}</span>
